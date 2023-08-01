@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step</title>
+    <style>
+        .step-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 80px auto;
+            width: 800px;
+        }
+
+        .step-wrapper .step-item {
+            display: flex;
+            position: relative;
+            flex: 1;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .step-wrapper .step-item::before {
+            content: "";
+            border-bottom: 2px solid #ccc;
+            position: absolute;
+            width: 50%;
+            left: 74%;
+            top: 29%;
+        }
+
+        .step-wrapper .step-item:last-child::before {
+            content: none;
+        }
+
+        .step-wrapper .step-item .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ccc;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="step-wrapper">
+        <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-name">First</div>
+        </div>
+        <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-name">Second</div>
+        </div>
+        <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-name">Third</div>
+        </div>
+        <div class="step-item">
+            <div class="step-number">4</div>
+            <div class="step-name">Forth</div>
+        </div>
+    </div>
+</body>
+
+</html>
